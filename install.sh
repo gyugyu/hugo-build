@@ -1,7 +1,7 @@
 #!/bin/sh
 # Usage: PREFIX=/usr/local ./install.sh
 #
-# Installs node-build under $PREFIX.
+# Installs hugo-build under $PREFIX.
 
 set -e
 
@@ -13,10 +13,10 @@ fi
 
 BIN_PATH="${PREFIX}/bin"
 ETC_PATH="${PREFIX}/etc"
-SHARE_PATH="${PREFIX}/share/node-build"
+SHARE_PATH="${PREFIX}/share/hugo-build"
 
 mkdir -p "$BIN_PATH" "$ETC_PATH" "$SHARE_PATH"
 
 install -p bin/* "$BIN_PATH"
 install -d etc/* "$ETC_PATH"
-install -p -m 0644 share/node-build/* "$SHARE_PATH"
+install -p -m 0644 share/hugo-build/* "$SHARE_PATH"
